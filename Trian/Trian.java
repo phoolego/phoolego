@@ -1,3 +1,5 @@
+package Train;
+
 public class Trian {
 	private Locomotive locomotive;
 	private Carriage[] carriage;
@@ -37,7 +39,7 @@ public class Trian {
 			System.out.println("Trian is full");
 	}
 	public void ejectCarriage() {
-		if(size==0) 
+		if(size>0) 
 		{
 			carriage[--size] = null;
 			calculateCurrentSpeed();
@@ -47,15 +49,15 @@ public class Trian {
 	}
 	
 	public int totalWeigth() {
-		int total=locomotive.weigth;
+		int total=locomotive.getWeight();
 		for(int i=0 ; i<size ; i++) 
 		{
-			total += carriage[i].weigth;
+			total += carriage[i].getWeight();
 		}
 		return total;
 	}
 	public void calculateCurrentSpeed(){
-		double decreaseSpeed = (int)(totalWeigth()/100)*0.01;
+		double decreaseSpeed = (int)((totalWeigth()-locomotive.getWeight())/100)*0.01;
 		currentSpeed = locomotive.getTopSpeed()-decreaseSpeed;
 	}
 }

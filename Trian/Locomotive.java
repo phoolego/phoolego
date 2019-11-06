@@ -1,7 +1,9 @@
+package Train;
+
 public class Locomotive extends Carriage{
 	private double topSpeed;
 	public Locomotive(double topSpeed) {
-		super(3000);
+		super(3500);
 		this.topSpeed = topSpeed;
 	}
 	
@@ -15,6 +17,6 @@ public class Locomotive extends Carriage{
 	
 	public void printInfo()
 	{
-		System.out.println("Weigth : "+weigth+" Speed : "+topSpeed);
+		System.out.println("Weigth : "+weight+" Speed : "+topSpeed);
 	}
 }

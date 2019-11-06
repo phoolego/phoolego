@@ -1,3 +1,5 @@
+package Train;
+
 public class FirstClass extends Carriage{
 	private Passenger[][] room;
 	
@@ -6,8 +8,8 @@ public class FirstClass extends Carriage{
 		room = new Passenger[5][3];
 	}
 	
-	public void addPassenger(Passenger p) {
-		addPassenger(p, null);
+	public void addPassenger(Passenger p1) {
+		addPassenger(p1, null);
 	}
 	public void addPassenger(Passenger p1,Passenger p2) {
 		addPassenger(p1, p2, null);
@@ -23,7 +25,7 @@ public class FirstClass extends Carriage{
 					if(tmp[j]!=null) 
 					{
 						room[i][j] = tmp[j];
-						weigth += tmp[j].weigth;
+						weight += tmp[j].getWeight();
 					}
 				}
 				break;
@@ -32,11 +34,12 @@ public class FirstClass extends Carriage{
 	}
 	
 	public void deletePassenger(int n) {
+		n--;
 		for(int i=0 ; i<room[i].length && n<room.length ; i++) 
 		{
 			if(room[n][i]!=null) 
 			{
-				weigth -= room[n][i].weigth;
+				weight -= room[n][i].getWeight();
 				room[n][i] = null;
 			}
 		}
@@ -44,12 +47,16 @@ public class FirstClass extends Carriage{
 	
 	public void printInfo()
 	{
-		for(int i=0 ; i<room.length && room[i][0]!=null ; i++) 
+		for(int i=0 ; i<room.length ; i++) 
 		{
-			System.out.println("Room "+i);
-			for(int j=0 ; j<room[i].length && room[i][j]!=null ; j++) 
+			if(room[i][0]!=null) 
 			{
-				System.out.print(" "+room[i][j].name);
+				System.out.print("Room "+(i+1)+" :");
+				for(int j=0 ; j<room[i].length && room[i][j]!=null ; j++) 
+				{
+					System.out.print(" "+room[i][j].getName());
+				}
+				System.out.println();
 			}
 		}
 	}

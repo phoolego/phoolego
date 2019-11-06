@@ -1,0 +1,59 @@
+test FirstClass class=====
+Room 1 : Bob Alex
+Room 2 : Bob
+Room 3 : Jan Alex Bob
+2880
+Room 2 : Bob
+Room 3 : Jan Alex Bob
+2750
+
+test RegularClass class=====
+Seat 1 : Bob
+Seat 2 : Alex
+Seat 3 : Jan
+Seat 4 : Bob
+Seat 5 : Alex
+Seat 6 : Jan
+Seat 7 : Bob
+Seat 8 : Alex
+Seat 9 : Jan
+Seat 10 : Bob
+Seat 11 : Alex
+Seat 12 : Jan
+Seat 13 : Bob
+Seat 14 : Alex
+Seat 15 : Jan
+Seat 16 : Bob
+Seat 17 : Alex
+Seat 18 : Jan
+Seat 19 : Bob
+Seat 20 : Alex
+Seat 21 : Jan
+Seat 22 : Bob
+Seat 23 : Alex
+Seat 24 : Jan
+Seat 25 : Bob
+Seat 26 : Alex
+Seat 27 : Jan
+Seat 28 : Bob
+Seat 29 : Alex
+Seat 30 : Jan
+Seat 31 : Bob
+Seat 32 : Alex
+Seat 33 : Jan
+Seat 34 : Bob
+Seat 35 : Alex
+Seat 36 : Jan
+Seat 37 : Bob
+Seat 38 : Alex
+Seat 39 : Jan
+Seat 40 : Bob
+4410
+
+test Train class=====
+70.0
+69.73
+69.45
+65.93
+66.37
+66.02

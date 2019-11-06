@@ -1,8 +1,16 @@
+package Train;
+
 public class Passenger {
-	String name;
-	int weigth;
+	private String name;
+	private int weight;
 	public Passenger(String n,int w){
 		name = n;
-		weigth = w;
+		weight = w;
+	}
+	public String getName() {
+		return name;
+	}
+	public int getWeight() {
+		return weight;
 	}
 }

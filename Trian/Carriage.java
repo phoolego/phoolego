@@ -1,10 +1,12 @@
+package Train;
+
 public abstract class Carriage {
-	protected int weigth;
+	protected int weight;
 	public Carriage(int w) {
-		weigth = w;
+		weight = w;
 	}
-	public int getWeigth() {
-		return weigth;
+	public int getWeight() {
+		return weight;
 	}
 	public abstract void printInfo();
 }
