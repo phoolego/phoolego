@@ -1,9 +1,5 @@
-package armory;
+package Armory;
 
-/**
- *
- * @author Student
- */
 public abstract class Gun {
     private int ammoCapacity;
     private int currentLoad;
@@ -39,7 +35,7 @@ public abstract class Gun {
         return currentLoad;
     }
 
-    public boolean getSafetyOn() {
+    public boolean isSafetyOn() {
         return safetyOn;
     }
     

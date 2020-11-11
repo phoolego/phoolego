@@ -1,39 +1,39 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package armory;
+package Armory;
 
-/**
- *
- * @author Student
- */
 public class AssaultRifle extends Gun{
-    int FiringMode;
+    private int firingMode;
     
+    public int getFiringMode() {
+    	return firingMode;
+    }
     public AssaultRifle(int ammoCapacity){
         super(ammoCapacity);
     }
     
     public void reload(){
         super.setCurrentLoad(super.getAmmoCapacity());
+        System.out.println("Current ammo is "+super.getCurrentLoad()+"/"+super.getAmmoCapacity());
     }
     
     public void switchMode(){
-        FiringMode = (FiringMode+1)%3;
+    	firingMode = (firingMode+1)%3;
     } 
 
     @Override
     public void shoot() {
-        if(!super.getSafetyOn()){
+        if(!super.isSafetyOn()){
             int ammo = super.getCurrentLoad();
-            if(FiringMode==0){
+            if(firingMode==0 && ammo>0){
                 ammo--;
-            }else if(FiringMode==1){
+            }else if(firingMode==1 && ammo>2){
                 ammo-=3;
-            }else{
+            }else if(firingMode==1 && ammo>0) {
+            	ammo=0;
+            }
+            else if(ammo>0){
                 ammo=0;
+            }else {
+            	System.out.println("no ammo");
             }
             super.setCurrentLoad(ammo);
         }else{
